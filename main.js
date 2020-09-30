@@ -10,24 +10,20 @@ let singleName = false;
 let winner = "";
 let removedNames = 0;
 
-
-
 function setup() {
 
-  let canvas = createCanvas(sketchParent.clientWidth, sketchParent.clientHeight);
+  let canvas = createCanvas(innerWidth, innerHeight);
   canvas.parent("sketch-parent");
-  background(0);
+  //background(0);
   
   colorMode(HSB, 100);
   textSize(100);
   strokeWeight(4);
 }
 
-
 function draw() {
 
   // draw nearly transparent squares over whole canvas
-  
 
   if(shouldDisplay) {
 
@@ -116,7 +112,7 @@ roller.addEventListener("click", function(){
     if(names.length == 1) {
       singleName = true;
     }
-    background(0);  
+    //background(0);  
     selectName();
     removedNames++;
   }
@@ -184,8 +180,6 @@ function windowResized() {
     sketchParent.style.border = "none";
     resizeCanvas(innerWidth, innerHeight);
   } else {
-    sketchParent.style.position = "static";
-    sketchParent.style.border = "2px solid coral";
     resizeCanvas(sketchParent.clientWidth, sketchParent.clientHeight);
   }
   background(0);
@@ -223,7 +217,7 @@ function addNames() {
 function addNamesDebug() {
   removedNames = 0;
   let remainingNames = document.getElementById("remaining-names");
-  names = ["dog", "cat", "fish", "bird", "antelope", "penguin", "dolphin", "monkey", "caterpillar", "lizard", "shark", "spider", "mouse", "keyboard", "lion", "bear", "ferret", "wildabeast", "crocodile", "alligator", "ladybug", "cow", "pig", "chicken", "turtle", "orangutan", "sloth"];
+  names = ["dog", "cat", "fish", "bird", "antelope", "penguin", "dolphin", "monkey", "caterpillar", "lizard", "shark", "spider", "mouse", "keyboard", "lion", "bear", "ferret", "crocodile", "alligator", "ladybug", "cow", "pig", "chicken", "turtle", "orangutan", "sloth"];
 
   for(let i = 0; i < names.length; i++) {
     let liNode = document.createElement("LI");
