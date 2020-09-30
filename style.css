@@ -23,6 +23,22 @@ body {
     z-index: 1;
 }
 
+#right-section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: clamp(200px, 15%, 300px);
+    /* background: blue; */
+    overflow-y: scroll;
+    padding: 2em;
+}
+
+#name-field {
+    margin-bottom: 1em;
+}
 
 #remaining-names {
     display: flex;
@@ -33,26 +49,12 @@ body {
     font-family: 'Epilogue', sans-serif;
 }
 
-#right-section {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    width: clamp(150px, 10%, 300px);
-    flex-direction: column;
-    height: 100vh;
-    background: blue;
-    overflow-y: scroll;
-
-}
-
 #warning {
     /* position: relative; */
     /* display: none; */
     color: red;
     font-size: 12px;
     font-family: arial;
-
 }
 
 #sketch-parent {
@@ -67,9 +69,11 @@ body {
 
 li {
     list-style: none;
+    margin: .25em 0;
+    font-size: 2.5vmin;
 }
 
-#roll-it {
+.btn {
     background: unset;
     font-size: 2vmin;
     border: 2px solid white;
@@ -77,10 +81,42 @@ li {
     color: white;
     padding: .5em 1em;
     font-family: 'Epilogue', sans-serif;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 1em;
+}
+
+#submit {
+    font-size: 1.5vmin;
+}
+
+.btn:hover {
+    border: 2px solid coral;
+}
+
+
+.btn:active {
+    background: salmon;
 }
 
 #roll-it:active {
-    background: salmon;
+    background: rgb(155,6,255);
+    background: linear-gradient(90deg, rgba(155,6,255,1) 0%, rgba(255,250,0,1) 25%, rgba(29,242,253,1) 50%, rgba(253,91,46,1) 75%, rgba(239,30,255,1) 100%);
+    box-shadow: 0px 0px 0px 2px yellow,
+    0px 0px 0px 4px cyan,
+    0px 0px 0px 6px magenta,
+    0px 0px 0px 1px lime;
+    border: 2px solid orangered;
+}
+
+#name-field {
+    background: unset;
+    color: white;
+    border: unset;
+    border-bottom: 2px solid white;
+    padding: .5em 1em;
+    font-size: 2vmin;
+}
+
+#name-field:focus {
+    outline: none !important;
+    /* background: darkcyan; */
 }
