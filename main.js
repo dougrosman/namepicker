@@ -7,15 +7,14 @@ let tempFrameCount;
 let shouldLerp = false;
 let shouldDisplay = false;
 let singleName = false;
-var winner = "";
-var removedNames = 0;
+let winner = "";
+let removedNames = 0;
 
-//let names = ["Darcy", "Dermott", "Fengwei", "Ilai", "Jun", "Max", "Riley", "Jeanette", "Shannon", "Soo", "Suri", "Winnie", "Xin", "Zhixuan"];
 
 
 function setup() {
 
-  var canvas = createCanvas(sketchParent.clientWidth, sketchParent.clientHeight);
+  let canvas = createCanvas(sketchParent.clientWidth, sketchParent.clientHeight);
   canvas.parent("sketch-parent");
   background(0);
   
@@ -260,7 +259,7 @@ function removeName(_name) {
 /*
 function shuffle(arra1) {
 
-    var ctr = arra1.length, temp, index;
+    let ctr = arra1.length, temp, index;
 
     // While there are elements in the array
     while (ctr > 0) {
