@@ -6,7 +6,6 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap" rel="stylesheet">
 
-
     <!-- fonts -->
 
     <link rel="stylesheet" href="style.css">
@@ -15,26 +14,22 @@
     <title>Name Picker!</title>
 </head>
 <body>
+    <main>
         
-    <header>
-        <h1 id="title">Decisions, decisions...</h1>
-    </header>
-    
-
-    <div id="right-section">
-        <button class="btn" id="roll-it">Roll it!</button>
-        <button class="btn" onclick="addNames()" id="submit">Add name</button>
-        <input type="text" id="name-field" placeholder="Enter a name" onkeydown="search(this)">
+        <h1 id="title" class="section">Decisions, decisions...</h1>
         
-        <ul id="remaining-names"></ul>
-    </div>
+        <div id="right-section" class="section">
+            <button class="btn" id="roll-it">Roll it!</button>
+            <button class="btn" onclick="addNames()" id="submit">Add name</button>
+            <input type="text" id="name-field" placeholder="Enter a name" onkeydown="search(this)">
+            
+            <ul id="remaining-names"></ul>
+        </div>
+    </main>
+        
+        <div id="sketch-parent"></div>
     
-    <div id="sketch-parent"></div>
     
-    
-    
-
-
     <script src="main.js"></script>
 </body>
 </html>
