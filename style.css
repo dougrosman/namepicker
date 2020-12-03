@@ -55,8 +55,11 @@ main {
 
 #remaining-names li {
     font-size: clamp(12px, 6vmin, 22px) !important;
-    display: flex;
-    justify-content: space-between;
+}
+
+#remaining-names li:hover {
+    color: red;
+    cursor: not-allowed;
 }
 
 #warning {

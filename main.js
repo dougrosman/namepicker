@@ -89,7 +89,6 @@ function draw() {
 }
 
 function selectName() {
-
   // clear the nameParticles array
   nameParticles = [];
   for(let i = 0; i < names.length; i++) {
@@ -99,7 +98,6 @@ function selectName() {
   }
   shouldDisplay = true;
   shouldLerp = false;
-  print(nameParticles);
 }
 
 roller.addEventListener("click", function(){
@@ -131,7 +129,7 @@ class Particle {
     this.stroke = color(random(100), random(100), 100);
     this.size = 1;
     this.name = _name;
-    this.drag = random(0.987, 0.991);
+    this.drag = random(0.97, 0.99);
   }
 
   update() {
@@ -205,7 +203,6 @@ function addNames() {
   else {
     enteredName.placeholder="Enter a name";
     names.push(enteredName.value);
-    console.log(names);
     let liNode = document.createElement("LI");
     let textNode = document.createTextNode(names[names.length-1]);
     liNode.appendChild(textNode);
@@ -247,26 +244,3 @@ function removeName(_name) {
     ulNames.removeChild(ulNames.childNodes[removeIndex]);
   }
 }
-
-////////// UNUSED //////////
-
-/*
-function shuffle(arra1) {
-
-    let ctr = arra1.length, temp, index;
-
-    // While there are elements in the array
-    while (ctr > 0) {
-        // Pick a random index
-        index = Math.floor(Math.random() * ctr);
-        // Decrease ctr by 1
-        ctr--;
-        // And swap the last element with it
-        temp = arra1[ctr];
-        arra1[ctr] = arra1[index];
-        arra1[index] = temp;
-    }
-    return arra1;
-}
-
-*/
