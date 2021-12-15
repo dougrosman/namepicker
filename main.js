@@ -129,7 +129,7 @@ class Particle {
     this.stroke = color(random(100), random(100), 100);
     this.size = 1;
     this.name = _name;
-    this.drag = random(0.97, 0.99);
+    this.drag = random(0.96, 0.975);
   }
 
   update() {
